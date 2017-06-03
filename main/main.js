@@ -3,16 +3,25 @@ const loadAllItems = require('./loadAllItems.js');
 module.exports = function main() {
     console.log("Debug Info");
 	
-	var item=loadAllItems();
+	
 	 
-	function printInventory(inputs)
+	
+				
+	
+	
+    return 'Hello World!';
+};
+
+
+
+function printInventory(inputs)
 	{
 		this.inputs=inputs;
 		this.actualText=function()
 		{
 			
 			var num=[];
-			
+			var item=loadAllItems();
 			for(var i=0;i<inputs.length;i++)
 				for(var j=0;j<item.length;j++)
 					if(inputs[i]==item[j].barcode)
@@ -28,7 +37,7 @@ module.exports = function main() {
 						break;
 					}
 
-			var expectText = '***<Ã»Ç®×¬ÉÌµê>¹ºÎïÇåµ¥***\n' ;
+			var expectText = '***<æ²¡é’±èµšå•†åº—>è´­ç‰©æ¸…å•***\n' ;
 
 			var sum=0;
             
@@ -38,12 +47,12 @@ module.exports = function main() {
                 
 				sum+=num[i].price*num[i].size;
             
-				expectText+='Ãû³Æ£º'+num[i].name+'£¬ÊıÁ¿£º'+num[i].size+'Æ¿£¬µ¥¼Û£º'+num[i].price+'(Ôª)£¬Ğ¡¼Æ£º'+num[i].price*num[i].size+'(Ôª)\n' 
+				expectText+='åç§°ï¼š'+num[i].name+'ï¼Œæ•°é‡ï¼š'+num[i].size+'ç“¶ï¼Œå•ä»·ï¼š'+num[i].price+'(å…ƒ)ï¼Œå°è®¡ï¼š'+num[i].price*num[i].size+'(å…ƒ)\n' 
             
 			}
             
 				expectText+='----------------------\n' +
-'×Ü¼Æ£º'+sum+'(Ôª)\n' +'**********************';
+'æ€»è®¡ï¼š'+sum+'(å…ƒ)\n' +'**********************';
 				
 				return expectText;
 
@@ -51,8 +60,3 @@ module.exports = function main() {
 
 		
 	}
-				
-	
-	
-    return 'Hello World!';
-};
