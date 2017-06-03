@@ -26,7 +26,7 @@ function printInventory(inputs)
 				for(var j=0;j<item.length;j++)
 					if(inputs[i]==item[j].barcode)
 					{
-						int index=num.indexOf(item[j]);
+						var index=num.indexOf(item[j]);
 						if(index!=-1)
 							num[index].size++;
 						else
