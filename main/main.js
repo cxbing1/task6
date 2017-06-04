@@ -32,12 +32,12 @@ module.exports = function printInventory(inputs)
                 
 				sum+=num[i].price*num[i].size;
             
-				expectText+='名称：'+num[i].name+'，数量：'+num[i].size+'瓶，单价：'+num[i].price+'(元)，小计：'+num[i].price*num[i].size+'(元)\n' 
+				expectText+='名称：'+num[i].name+'，数量：'+num[i].size.toFixed(2)+'瓶，单价：'+num[i].price.toFixed(2)+'(元)，小计：'+(num[i].price*num[i].size).toFixed(2)+'(元)\n' 
             
 			}
             
 				expectText+='----------------------\n' +
-'总计：'+sum+'(元)\n' +'**********************';
+'总计：'+sum.toFixed(2)+'(元)\n' +'**********************';
 				
 				return expectText;
 
