@@ -1,24 +1,9 @@
 const loadAllItems = require('./loadAllItems.js');
 
-module.exports = function main() {
-    console.log("Debug Info");
-	
-	
-	 
-	
-				
-	
-	
-    return 'Hello World!';
-};
-
-
-
-function printInventory(inputs)
+module.exports = function printInventory(inputs)
 	{
 		this.inputs=inputs;
-		this.actualText=function()
-		{
+		
 			
 			var num=[];
 			var item=loadAllItems();
@@ -56,7 +41,10 @@ function printInventory(inputs)
 				
 				return expectText;
 
-		}
+		
 
 		
-	}
+	};
+
+
+
